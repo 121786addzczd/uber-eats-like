@@ -1,5 +1,5 @@
 // サーバーサイドで定義したURL文字列を返す定数をいくつか設定
-const DEFAULT_API_LOCALHOST = 'http://localhost:3000/api/vi'
+const DEFAULT_API_LOCALHOST = 'http://localhost:3000/api/v1'
 
 export const restaurantsIndex = `${DEFAULT_API_LOCALHOST}/restaurants`
 export const foodsIndex = (restaurantId) =>
