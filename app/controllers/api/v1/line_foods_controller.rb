@@ -38,6 +38,7 @@ module Api
       # replaceは古い仮注文を論理削除(データを非活性の状態にする)
       def replace
         LineFood.active.other_restaurant(@ordered_food.restaurant.id).each do |line_food|
+          line_food.update_attribute(:active, false)
         end
 
         set_line_food(@ordered_food)
